@@ -1,0 +1,22 @@
+.DS_Store
+
+# Node / TypeScript projects anywhere in this workspace
+**/node_modules/
+**/dist/
+**/coverage/
+**/.env
+**/.env.*
+
+# Common logs and caches
+**/*.log
+**/.cache/
+**/.turbo/
+**/.vite/
+**/.next/
+**/.nuxt/
+**/.svelte-kit/
+
+# Test outputs
+**/.nyc_output/
+**/playwright-report/
+**/test-results/
