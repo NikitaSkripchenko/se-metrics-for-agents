@@ -1,23 +1,6 @@
-export const TASK_STATUSES = ["todo", "in_progress", "done"] as const;
-export const TASK_PRIORITIES = ["low", "medium", "high"] as const;
-
-export type TaskStatus = (typeof TASK_STATUSES)[number];
-export type TaskPriority = (typeof TASK_PRIORITIES)[number];
-
-export type Task = {
-  id: string;
-  title: string;
-  description: string | null;
-  status: TaskStatus;
-  priority: TaskPriority;
-  dueDate: string | null;
-  createdAt: string;
-  updatedAt: string;
-};
-
-export type TaskSummary = {
-  total: number;
-  byStatus: Record<TaskStatus, number>;
-  byPriority: Record<TaskPriority, number>;
-  overdue: number;
-};
+export { TASK_PRIORITIES } from "./domain/taskPriority.js";
+export { TASK_STATUSES } from "./domain/taskStatus.js";
+export type { Task } from "./domain/task.js";
+export type { TaskPriority } from "./domain/taskPriority.js";
+export type { TaskStatus } from "./domain/taskStatus.js";
+export type { TaskSummary } from "./domain/taskSummary.js";
