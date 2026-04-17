@@ -1,0 +1,23 @@
+{
+  "name": "task-management-contract-tests",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "test:baseline": "TARGET=baseline vitest run",
+    "test:compact": "TARGET=compact vitest run",
+    "test:clean": "TARGET=clean vitest run",
+    "test:fragmented": "TARGET=fragmented vitest run",
+    "test:all": "tsx scripts/run-matrix.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^18.19.0",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.2",
+    "vitest": "^3.2.4"
+  }
+}
